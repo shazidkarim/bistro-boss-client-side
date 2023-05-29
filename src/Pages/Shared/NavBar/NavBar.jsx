@@ -1,17 +1,12 @@
+import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
     const navOptions = <>
-        <li><a>Home</a></li>
-        <li tabIndex={0}>
-            <a className="justify-between">
-                contact us
-            </a>
-           
-        </li>
-        <li><a>Dashboard</a></li>
-        <li><a>Our menu</a></li>
-        <li><a>Our shop</a></li>
+        <li><Link to={'/'}>Home</Link></li>
+        <li><Link to={'/'}>Dashboard</Link></li>
+        <li><Link to={'/menu'}>Our menu</Link></li>
+        <li><Link to={'/order/salad'}>Our shop</Link></li>
     </>
     return (
         <>
@@ -33,7 +28,7 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Get started</a>
+                    <a className="btn">Login</a>
                 </div>
             </div>
         </>
